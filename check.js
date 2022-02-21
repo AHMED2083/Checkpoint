@@ -1,3 +1,5 @@
+// sorry, I can do something but it doesn't work, except that I love it hhhhhhhhhhhhhhhhhhhh
+
 function findSum(A, B, n) {
   let hash = new Map();
   for (let i = 0; i < n; i++) {
