@@ -1,35 +1,27 @@
-// sorry, I can do something but it doesn't work, except that I love it hhhhhhhhhhhhhhhhhhhh
+let array1 = [3, 1, 7, 9];
+let array2 = [2, 4, 1, 9, 3];
 
-function findSum(A, B, n) {
-  let hash = new Map();
-  for (let i = 0; i < n; i++) {
-    if (!hash.has(A[i])) {
-      hash.set(A[i], 1);
-    } else {
-      hash.set(A[i], hash.get(A[i]) + 1);
+function arrays(array1, array2) {
+  const arr = [];
+  
+  for (let i = 0; i < array1.length; i++) {
+    if (array2.includes(array1[i]) == false) {
+      arr.push(array1[i]);
     }
   }
 
-  for (let i = 0; i < n; i++) {
-    if (!hash.has(B[i])) {
-      hash.set(B[i], 1);
-    } else {
-      hash.set(B[i], hash.get(B[i]) + 1);
+ 
+  for (let j = 0; j < array2.length; j++) {
+    if (array1.includes(array2[j]) == false) {
+      arr.push(array2[j]);
     }
   }
 
   let sum = 0;
-  for (let [key, value] of hash.entries()) {
-    if (value == 2) {
-      sum += key * 2;
-    }
+  for (let i = 0; i < arr.length; i++) {
+    sum = sum+ arr[i];
   }
   return sum;
 }
 
-let A = [5, 4, 9, 2, 3];
-let B = [2, 8, 7, 6, 3];
-
-let n = A.length;
-
-document.write(findSum(A, B, n));
+console.log(arrays(array1, array2));
